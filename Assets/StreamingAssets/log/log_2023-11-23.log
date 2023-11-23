@@ -1,0 +1,6 @@
+2023-11-23 15:12:46,641 | DEBUG | [thread:1] LogExample:21 - 直接调用 
+2023-11-23 15:12:46,645 | DEBUG | [thread:1] LogExample:24 - 使用Logger调用 
+2023-11-23 16:19:59,483 | DEBUG | [thread:1] LogExample:21 - 直接调用 
+2023-11-23 16:19:59,487 | DEBUG | [thread:1] LogExample:24 - 使用Logger调用 
+2023-11-23 16:20:22,523 | DEBUG | [thread:1] LogExample:21 - 直接调用 
+2023-11-23 16:20:22,529 | DEBUG | [thread:1] LogExample:24 - 使用Logger调用 

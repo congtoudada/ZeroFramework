@@ -1,0 +1,13 @@
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\bin\Release\netstandard2.1\ZeroLogLibrary.deps.json
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\bin\Release\netstandard2.1\ZeroLogLibrary.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\bin\Release\netstandard2.1\ZeroLogLibrary.pdb
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\bin\Release\netstandard2.1\log4net.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\bin\Release\netstandard2.1\UnityEngine.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\bin\Release\netstandard2.1\UnityEngine.xml
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.AssemblyInfoInputs.cache
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.AssemblyInfo.cs
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.csproj.CoreCompileInputs.cache
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.csproj.CopyComplete
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.dll
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.pdb
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.csproj.AssemblyReference.cache
