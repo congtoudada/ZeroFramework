@@ -13,7 +13,7 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class PoolTool
+    public class PoolTool : IPoolTool
     {
         public IObjectPool<T> AllocateObjectPool<T>(Func<T> createFunc, Action<T> actionOnGet,
             Action<T> actionOnRelease, Action<T> actionOnDestroy,

@@ -11,3 +11,4 @@ E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\R
 E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.dll
 E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.pdb
 E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\obj\Release\netstandard2.1\ZeroLogLibrary.csproj.AssemblyReference.cache
+E:\Practice\Unity\Home\ZeroFramework\ZeroLib\ZeroLogLibrary\ZeroLogLibrary\bin\Release\netstandard2.1\ZeroLogLibrary.xml

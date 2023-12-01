@@ -11,27 +11,67 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    //全局单例（懒加载）
-    public class Singleton<T> where T : new()
+    public abstract class Singleton<T> : ISingleton where T : Singleton<T>
     {
-        private static T _instance;
+        /// <summary>
+        /// 静态实例
+        /// </summary>
+        protected static T mInstance;
+
+        /// <summary>
+        /// 标签锁：确保当一个线程位于代码的临界区时，另一个线程不进入临界区。
+        /// 如果其他线程试图进入锁定的代码，则它将一直等待（即被阻止），直到该对象被释放
+        /// </summary>
+        static object mLock = new object();
+
+        /// <summary>
+        /// 静态属性
+        /// </summary>
         public static T Instance
         {
             get
             {
-                if (_instance == null)
+                lock (mLock)
                 {
-                    _instance = new T();
+                    if (mInstance == null)
+                    {
+                        mInstance = SingletonCreator.CreateSingleton<T>();
+                    }
                 }
-                return _instance;
+
+                return mInstance;
             }
         }
-
-        protected Singleton()
-        {
-            Init();
-        }
         
-        protected virtual void Init(){ }
+        private static int _InitCount = 0;
+        public int ID = 0;
+
+        /// <summary>
+        /// 资源释放
+        /// </summary>
+        public virtual void Dispose()
+        {
+            mInstance = null;
+        }
+
+        /// <summary>
+        /// 单例初始化方法
+        /// </summary>
+        public virtual void OnSingletonInit()
+        {
+            _InitCount++;
+            ID = _InitCount;
+        }
+
+        public virtual void ResetID()
+        {
+            _InitCount = 0;
+            ID = 0;
+        }
+
+        public virtual int GetID()
+        {
+            return ID;
+        }
     }
 }

@@ -14,14 +14,14 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class MixLog : ILogTool
+    public class MixLog : ILogToolFeature
     {
-        private ILogTool[] _logList;
+        private ILogToolFeature[] _logList;
         
         
         public MixLog(Type type)
         {
-            _logList = new ILogTool[2];
+            _logList = new ILogToolFeature[2];
             _logList[0] = new UnityLog();
             _logList[1] = new Log4net(type);
         }

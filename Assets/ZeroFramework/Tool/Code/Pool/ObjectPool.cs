@@ -77,6 +77,7 @@ namespace ZeroFramework
             // 缓存池有Get对象，才可以返回
             if (CountActive > 0)
             {
+                #if UNITY_EDITOR
                 //重复检验: 如果缓存池存在该对象则无法放回
                 if (_collectionCheck)
                 {
@@ -88,6 +89,7 @@ namespace ZeroFramework
                         }
                     }
                 }
+                #endif
                 
                 //缓存池容量已达到上限，触发销毁事件，不放回
                 if (_pool.Count >= _maxSize)

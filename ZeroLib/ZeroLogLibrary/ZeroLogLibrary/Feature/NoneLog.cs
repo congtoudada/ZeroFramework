@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ZeroFramework
 {
-    class NoneLog : ILogTool
+    class NoneLog : ILogToolFeature
     {
         public void Debug(object message)
         {

@@ -1,0 +1,11 @@
+2023-11-30 19:54:02,700 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-11-30 19:54:02,704 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-11-30 19:56:10,035 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-11-30 19:56:10,040 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-11-30 19:56:10,041 | DEBUG | [thread:1] ZeroMonoController:30 - 使用ZeroMonoController调用 
+2023-11-30 20:02:23,786 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-11-30 20:02:23,790 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-11-30 20:02:23,790 | DEBUG | [thread:1] LogExample:30 - 使用ZeroMonoController调用 
+2023-11-30 20:47:24,654 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-11-30 20:47:24,658 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-11-30 20:47:24,659 | DEBUG | [thread:1] LogExample:30 - 使用ZeroMonoController调用 

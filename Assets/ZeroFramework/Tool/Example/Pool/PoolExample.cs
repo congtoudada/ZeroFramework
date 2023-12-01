@@ -12,7 +12,7 @@ using UnityEngine.Pool;
 
 namespace ZeroFramework
 {
-    public class PoolExample : MonoBehaviour
+    public class PoolExample : ZeroMonoController<PoolExample>
     {
         public GameObject prefab;
 
@@ -37,9 +37,9 @@ namespace ZeroFramework
         void Start()
         {
             //1.使用ZeroFramework提供的对象池
-            _zeroPool = ZeroTool.Pool.AllocateObjectPool<GameObject>(
+            _zeroPool = this.GetZeroToolKits().PoolKit.AllocateObjectPool<GameObject>(
                 CreateFunc, ActionOnGet, ActionOnRelease, ActionOnDestroy,false, 3, 5);
-            
+
             //2.使用Unity提供的对象池（2021.3之后支持）
             _unityPool = new UnityEngine.Pool.ObjectPool<GameObject>(
                 CreateFuncUnity, ActionOnGet, ActionOnRelease, ActionOnDestroy, false, 3, 5);
@@ -76,6 +76,11 @@ namespace ZeroFramework
                 {
                     _zeroPool.Clear();
                     _unityPool.Clear();
+                }
+                if (Input.GetKeyDown(KeyCode.W)) //重复放回（非法！）
+                {
+                    _zeroPool.Release(_zeroQueue.Peek());
+                    _unityPool.Release(_unityQueue.Peek());
                 }
             #endif
         }

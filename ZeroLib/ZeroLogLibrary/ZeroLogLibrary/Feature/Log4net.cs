@@ -16,7 +16,7 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class Log4net : ILogTool
+    public class Log4net : ILogToolFeature
     {
         private ILog _logger;
         private Type t;
@@ -26,7 +26,7 @@ namespace ZeroFramework
 
         static Log4net()
         {
-            FileInfo file = new System.IO.FileInfo(Application.streamingAssetsPath + "/zero_configs/log4net.config"); //获取log4net配置文件
+            FileInfo file = new System.IO.FileInfo(Application.streamingAssetsPath + "/zero/configs/log4net.config"); //获取log4net配置文件
             //GlobalContext.Properties["ApplicationLogPath"] = Path.Combine(Application.streamingAssetsPath, "log");
             XmlConfigurator.ConfigureAndWatch(file); //加载log4net配置文件
             Application.quitting += () =>

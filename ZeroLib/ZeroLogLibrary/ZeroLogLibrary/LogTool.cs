@@ -15,14 +15,14 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class LogTool
+    public class LogTool : ILogTool
     {
-        private Dictionary<Type, ILogTool> _cache;
+        private Dictionary<Type, ILogToolFeature> _cache;
         private const int _CACHE_CAPACITY = 15;
         private LogFactory _logFactory;
         private LogEnum _defaultLogEnum;
         private bool is_enable;
-        private ILogTool noneLog;
+        private ILogToolFeature noneLog;
 
         public LogTool(LogEnum logEnum, bool is_enable)
         {
@@ -40,7 +40,7 @@ namespace ZeroFramework
             this.is_enable = is_enable;
         }
 
-        public ILogTool AllocateLogger(Type type)
+        public ILogToolFeature AllocateLogger(Type type)
         {
             if (!is_enable || type==null)
             {
@@ -50,7 +50,7 @@ namespace ZeroFramework
             }
 
             if (_cache == null)
-                _cache = new Dictionary<Type, ILogTool>(_CACHE_CAPACITY);
+                _cache = new Dictionary<Type, ILogToolFeature>(_CACHE_CAPACITY);
             
             if (_cache.ContainsKey(type))
             {

@@ -23,7 +23,7 @@ namespace ZeroFramework
     
     public class LogFactory
     {
-        public ILogTool Create(LogEnum logEnum, Type t)
+        public ILogToolFeature Create(LogEnum logEnum, Type t)
         {
             switch (logEnum)
             {

@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class UnityLog : ILogTool
+    public class UnityLog : ILogToolFeature
     {
         public void Debug(object message)
         {
