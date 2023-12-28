@@ -1,0 +1,6 @@
+link: ${streaming}/zero/configs/template_system.yaml
+
+log:
+  log4net:
+    config: ${streaming}/zero/configs/log4net.config
+    output: ${streaming}/zero/logs

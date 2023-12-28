@@ -4,8 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: 
+  m_Scenes:
   - enabled: 1
-    path: Assets/ZeroFramework/Tool/Example/SingletonExample/SingletonExample2.unity
-    guid: 33b55c31ec6fa0145a9de90521e1d097
+    path: Assets/ZeroFramework/Utility/Example/Log/LogExample.unity
+    guid: e18c0c4213635174cbbcc3264dd64923
   m_configObjects: {}

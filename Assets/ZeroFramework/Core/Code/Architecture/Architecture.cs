@@ -61,7 +61,7 @@ namespace ZeroFramework
         public bool Initialized { get; set; }
         private IOCTypeContainer mTypeContainer = new IOCTypeContainer();
         private IOCTypeContainer<Func<object>> mTypeFuncContainer = new IOCTypeContainer<Func<object>>();
-        private TypeEventSystem mTypeEventSystem = new TypeEventSystem();
+        private ITypeEventKit mTypeEventKit = new TypeEventKit();
         
         // 类似单例实现架构类
         private static T mArchitecture;
@@ -259,15 +259,15 @@ namespace ZeroFramework
             return query.Do();
         }
 
-        public void SendEvent<TEvent>() where TEvent : new() => mTypeEventSystem.Send<TEvent>();
+        public void SendEvent<TEvent>() where TEvent : new() => mTypeEventKit.Send<TEvent>();
 
-        public void SendEvent<TEvent>(TEvent e) => mTypeEventSystem.Send<TEvent>(e);
+        public void SendEvent<TEvent>(TEvent e) => mTypeEventKit.Send<TEvent>(e);
 
-        public IUnRegister RegisterEvent<TEvent>(Action<TEvent> onEvent) => mTypeEventSystem.Register<TEvent>(onEvent);
+        public IUnRegister RegisterEvent<TEvent>(Action<TEvent> onEvent) => mTypeEventKit.Register<TEvent>(onEvent);
 
-        public void UnRegisterEvent<TEvent>(Action<TEvent> onEvent) => mTypeEventSystem.UnRegister<TEvent>(onEvent);
+        public void UnRegisterEvent<TEvent>(Action<TEvent> onEvent) => mTypeEventKit.UnRegister<TEvent>(onEvent);
         
-        public void UnRegisterEvent<TEvent>() => mTypeEventSystem.UnRegister<TEvent>();
+        public void UnRegisterEvent<TEvent>() => mTypeEventKit.UnRegister<TEvent>();
         
         #endregion
     }

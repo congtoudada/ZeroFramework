@@ -3,8 +3,9 @@
   作者：聪头
   邮箱：1322080797@qq.com
   日期：2023/11/22 16:07:56
-  功能：Nothing
+  功能：
 *****************************************************/
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using log4net;
@@ -12,8 +13,21 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class UnityLog : ILogToolFeature
+    public class UnityLog : ILogger
     {
+        public static UnityLog Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new UnityLog();
+                }
+                return _instance;
+            }
+        }
+        private static UnityLog _instance;
+
         public void Debug(object message)
         {
             UnityEngine.Debug.Log(message);

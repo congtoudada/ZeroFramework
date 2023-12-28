@@ -16,38 +16,35 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class Log4net : ILogToolFeature
+    public class Log4net : ILogger
     {
         private ILog _logger;
-        private Type t;
-        
-        // 获取调用LogWithStackTrace方法的堆栈信息
-        private static StackTrace stackTrace;
+        private Type type;
 
-        static Log4net()
+        public static void Init(string configPath, string outputPath)
         {
-            FileInfo file = new System.IO.FileInfo(Application.streamingAssetsPath + "/zero/configs/log4net.config"); //获取log4net配置文件
-            //GlobalContext.Properties["ApplicationLogPath"] = Path.Combine(Application.streamingAssetsPath, "log");
+            //配置文件内获取
+            GlobalContext.Properties["ApplicationLogPath"] = outputPath;
+            FileInfo file = new System.IO.FileInfo(configPath); //获取log4net配置文件
             XmlConfigurator.ConfigureAndWatch(file); //加载log4net配置文件
             Application.quitting += () =>
             {
                 LogManager.ShutdownRepository();
                 LogManager.Shutdown();
             };
-            //UnityEngine.Debug.Log("---------- Log4net全局初始化完成 ----------");
         }
 
-        public Log4net(Type t)
+        public Log4net(Type type)
         {
-            this.t = t;
-            _logger = LogManager.GetLogger(t);
+            this.type = type;
+            _logger = LogManager.GetLogger(type);
         }
 
         private string ProcessMessage(object message)
         {
             // 获取调用LogWithStackTrace方法的堆栈信息
             StackTrace stackTrace = new StackTrace(true);
-            return $"{t.Name}:{stackTrace.GetFrame(stackTrace.FrameCount-1).GetFileLineNumber()} - {message}";
+            return $"{type.Name}:{stackTrace.GetFrame(stackTrace.FrameCount-1).GetFileLineNumber()} - {message}";
         }
 
         public void Debug(object message)

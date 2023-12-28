@@ -1,0 +1,24 @@
+2023-12-28 13:22:52,688 | INFO  | [thread:1] ZeroToolKits:22 - hello world 
+2023-12-28 13:22:59,441 | INFO  | [thread:1] ZeroToolKits:22 - hello world 
+2023-12-28 13:27:53,675 | DEBUG | [thread:1] LogExample:24 - 直接调用 
+2023-12-28 13:27:53,680 | DEBUG | [thread:1] LogExample:27 - 使用Logger调用 
+2023-12-28 13:31:04,960 | DEBUG | [thread:1] LogExample:24 - 直接调用 
+2023-12-28 13:31:04,964 | DEBUG | [thread:1] LogExample:27 - 使用Logger调用 
+2023-12-28 13:51:40,936 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 13:51:40,940 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 14:59:34,632 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 14:59:34,646 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 21:38:20,351 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 21:38:20,355 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 21:49:20,746 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 21:49:20,750 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 21:55:52,473 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 21:55:52,476 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 21:56:21,942 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 21:56:21,946 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 21:58:38,118 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 21:58:38,121 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 22:00:09,819 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 22:00:09,823 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 
+2023-12-28 22:00:21,693 | DEBUG | [thread:1] LogExample:25 - 直接调用 
+2023-12-28 22:00:21,697 | DEBUG | [thread:1] LogExample:28 - 使用Logger调用 

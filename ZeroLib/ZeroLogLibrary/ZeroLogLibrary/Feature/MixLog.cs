@@ -1,8 +1,8 @@
 /****************************************************
-  文件：LogContainer.cs
+  文件：MixLog.cs
   作者：聪头
   邮箱：1322080797@qq.com
-  日期：2023/11/22 16:29:42
+  日期：2023-12-28 14:33:34
   功能：Nothing
 *****************************************************/
 
@@ -14,16 +14,15 @@ using UnityEngine;
 
 namespace ZeroFramework
 {
-    public class MixLog : ILogToolFeature
+    public class MixLog : ILogger
     {
-        private ILogToolFeature[] _logList;
-        
+        private List<ILogger> _logList;
         
         public MixLog(Type type)
         {
-            _logList = new ILogToolFeature[2];
-            _logList[0] = new UnityLog();
-            _logList[1] = new Log4net(type);
+            _logList = new List<ILogger>(2);
+            _logList.Add(UnityLog.Instance);
+            _logList.Add(new Log4net(type));
         }
 
         public void Debug(object message)
